@@ -1,0 +1,30 @@
+@prefix ns1: <file:///C:/Users/user/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///C:/Users/user/Protege.owl#circle1> a <file:///C:/Users/user/Protege.owl#Circle> ;
+    ns1:hasArea 78.54 .
+
+<file:///C:/Users/user/Protege.owl#hasArea> a owl:ObjectProperty ;
+    rdfs:domain <file:///C:/Users/user/Protege.owl#Shape> ;
+    rdfs:range xsd:decimal .
+
+<file:///C:/Users/user/Protege.owl#square1> a <file:///C:/Users/user/Protege.owl#Square> ;
+    ns1:hasArea 25.00 .
+
+<file:///C:/Users/user/Protege.owl#triangle1> a <file:///C:/Users/user/Protege.owl#Triangle> ;
+    ns1:hasArea 15.00 .
+
+<file:///C:/Users/user/Protege.owl#Circle> a owl:Class ;
+    rdf:subClassOf <file:///C:/Users/user/Protege.owl#Shape> .
+
+<file:///C:/Users/user/Protege.owl#Square> a owl:Class ;
+    rdf:subClassOf <file:///C:/Users/user/Protege.owl#Shape> .
+
+<file:///C:/Users/user/Protege.owl#Triangle> a owl:Class ;
+    rdf:subClassOf <file:///C:/Users/user/Protege.owl#Shape> .
+
+<file:///C:/Users/user/Protege.owl#Shape> a owl:Class .
+

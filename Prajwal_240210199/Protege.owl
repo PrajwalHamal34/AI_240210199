@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+  <!-- Declaration of Classes -->
+  <rdf:Description rdf:about="#Shape"/>
+  <rdf:Description rdf:about="#Circle"/>
+  <rdf:Description rdf:about="#Square"/>
+  <rdf:Description rdf:about="#Triangle"/>
+
+  <!-- Declaration of Object Properties -->
+  <rdf:Description rdf:about="#hasArea"/>
+  
+  <!-- Class Hierarchy -->
+  <rdf:Description rdf:about="#Shape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="#Circle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:subClassOf rdf:resource="#Shape"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Square">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:subClassOf rdf:resource="#Shape"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#Triangle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:subClassOf rdf:resource="#Shape"/>
+  </rdf:Description>
+
+  <!-- Object Property: hasArea -->
+  <rdf:Description rdf:about="#hasArea">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Shape"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+
+  <!-- Individual Instances for the Shapes -->
+  <rdf:Description rdf:about="#circle1">
+    <rdf:type rdf:resource="#Circle"/>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">78.54</hasArea>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#square1">
+    <rdf:type rdf:resource="#Square"/>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.00</hasArea>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="#triangle1">
+    <rdf:type rdf:resource="#Triangle"/>
+    <hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.00</hasArea>
+  </rdf:Description>
+
+</rdf:RDF>
